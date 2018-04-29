@@ -1,0 +1,11 @@
+{
+  "ignore_players": "true",
+  "match": {
+    "match_code": "C9",
+    "starts_at": "2015-09-13 18:45:00 EDT",
+    "map": ["cp_process_final","cp_gullywash_final1","koth_viaduct_pro7"],
+    "match_type": "single",
+    "region": "chi",
+    "teams": [51,40]
+  }
+}

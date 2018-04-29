@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <h1><%= "Match #{@match.match_code}: #{@teams.first.name} VS #{@teams.last.name}" %></h1>
+  <h3>State: <%= @match.state.camelize %></h3>
+  <%= "Starts at #{@match.starts_at.utc} (#{time_ago_in_words(@match.starts_at, include_seconds: true)} #{Time.now - @match.starts_at < 0 ? 'from now' : 'ago'})" %>
+  <div align="left" style="width: 66%">
+    <% if @server %>
+      <h3>Server Info</h3>
+      <table data-toggle="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Location</th>
+          <th>Join Info</th>
+          <th>STV Info</th>
+          <th>Status</th>
+          <th>Players</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= @server.id %></td>
+          <td><%= @server.region.upcase %></td>
+          <td>"<%= link_to @server.connect_string, "steam://connect/#{@server.real_address}:#{@server.listen_port}/#{@server.sv_password}" %>"</td>
+          <td>"<%= link_to @server.stv_string, "steam://connect/#{@server.real_address}:#{@server.stv_port}" %>"</td>
+          <td><%= @server.state.camelize %></td>
+          <td><%= @server.num_players %></td>
+        </tr>
+        </tbody>
+      </table>
+    <% else %>
+      <h3>No Server</h3>
+    <% end %>
+  </div>
+  <div align="left" style="width: 66%">
+    <h3><%= "Map".pluralize(@match.match_map_ids.count) %></h3>
+    <table data-toggle="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>State</th>
+        <th>Score</th>
+        <th>Logs</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @match.match_maps.each do |map| %>
+        <tr>
+          <td><%= map.map %></td>
+          <td><%= map.state.camelize %></td>
+          <td><%= map.current_winner_team ? "#{map.current_winner_team.tag} #{map.current_winner_score}-#{map.current_loser_score} #{map.current_loser_team.tag}" : "N/A" %></td>
+          <td><% if map.logs; map.logs.each do |log| %><%= link_to("logs.tf/#{log['id']}", "http://logs.tf/#{log['id']}") %>, <% end; end %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+run_server_tick:
+  every: ['15s']
+  class: ServerTick
+  description: "Run ServerTick every 10 seconds"
+
+run_toorny_update:
+  every: ['2m']
+  class: ToorneyUpdate
+  description: "Update from Toornament every 2 minutes"

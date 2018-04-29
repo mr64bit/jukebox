@@ -1,0 +1,23 @@
+/*
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "jquery-ui";
+//@import "dataTables/jquery.dataTables";
+@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
+
+td.details-control {
+  background: image-url('details_open.png') no-repeat center center;
+  cursor: pointer;
+}
+tr.details td.details-control {
+  background: image-url('details_close.png') no-repeat center center;
+}
+
+.table-striped>tbody>tr:nth-child(odd){
+  background-color: #f4f4f4;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #eeeeee;
+}

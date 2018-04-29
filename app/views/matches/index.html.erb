@@ -1,0 +1,21 @@
+<% content_for(:for_head) do %>
+  <script>
+    const match_columns = <%= @datatable.table_manager.table_for(viewing_as).javascript_columns.html_safe %>;
+  </script>
+<% end %>
+<br>
+<div class="container-fluid">
+  <table id="matches-table" data-source="<%= matches_path(format: :json) %>" class="table display table-bordered table-striped table-condensed table-hover">
+    <thead>
+      <tr>
+        <%= @datatable.table_manager.table_for(viewing_as).headers.html_safe %>
+      </tr>
+    </thead>
+
+    <tfoot>
+      <tr>
+        <%= @datatable.table_manager.table_for(viewing_as).headers.html_safe %>
+      </tr>
+    </tfoot>
+  </table>
+</div>

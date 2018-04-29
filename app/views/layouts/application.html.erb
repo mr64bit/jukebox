@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EVL Jukebox</title>
+  <%= favicon_link_tag 'jukebox_ico.png' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <% if content_for? :for_head %>
+    <%= yield :for_head %>
+  <% end %>
+</head>
+<body>
+<div class="container-fluid" style="float: left;"><%= link_to "All Matches", matches_path %></div>
+<div class="container-fluid" style="float: right;">Viewing as a <b><%= viewing_as %>.</b> (<%= login_logout %>?)</div>
+<br>
+
+<%= yield %>
+
+</body>
+</html>

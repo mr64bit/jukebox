@@ -1,0 +1,97 @@
+{
+  "match": {
+    "match_code": "UBF1",
+    "starts_at": "2115-04-23 01:39:12.0",
+    "map": ["pl_badwater", "cp_process_final", "koth_viaduct_pro5"],
+    "match_type": "bo3",
+    "region": "east",
+    "teams": [
+      {
+        "name": "Team RED",
+        "tag": "RED",
+        "id": 1,
+        "players": [
+          {
+            "name": "Scout",
+            "steam_id": 76561198127904567
+          },
+          {
+            "name": "Soldier",
+            "steam_id": 76561198127904375
+          },
+          {
+            "name": "Pyro",
+            "steam_id": 76561198127904987
+          },
+          {
+            "name": "Demoman",
+            "steam_id": 76561198127904373
+          },
+          {
+            "name": "Heavy",
+            "steam_id": 76561198127904735
+          },
+          {
+            "name": "Engineer",
+            "steam_id": 76561198127904198
+          },
+          {
+            "name": "Medic",
+            "steam_id": 76561198127904778
+          },
+          {
+            "name": "Sniper",
+            "steam_id": 76561198127904117
+          },
+          {
+            "name": "Spy",
+            "steam_id": 76561198127904689
+          }
+        ]
+      },
+      {
+        "name": "Team BLU",
+        "tag": "BLU",
+        "id": 2,
+        "players": [
+          {
+            "name": "Scoot",
+            "steam_id": 76561198127904988
+          },
+          {
+            "name": "Solly",
+            "steam_id": 76561198127904333
+          },
+          {
+            "name": "Devil",
+            "steam_id": 76561198127904965
+          },
+          {
+            "name": "Demo",
+            "steam_id": 76561198127904115
+          },
+          {
+            "name": "Hoovy",
+            "steam_id": 76561198127904378
+          },
+          {
+            "name": "Engy",
+            "steam_id": 76561198127904732
+          },
+          {
+            "name": "Dentist",
+            "steam_id": 76561198127904435
+          },
+          {
+            "name": "Snioper",
+            "steam_id": 76561198127904667
+          },
+          {
+            "name": "Spheee",
+            "steam_id": 76561198127904788
+          }
+        ]
+      }
+    ]
+  }
+}
